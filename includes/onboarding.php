@@ -19,15 +19,15 @@
                         <div class="layers-section-title layers-small layers-no-push-bottom">
                             <div class="layers-push-bottom-small">
                                 <small class="layers-label label-secondary">
-                                    <?php _e( 'Demo!' , 'layers-child' ); ?>
+                                    <?php _e( 'Demo!' , LAYERS_DEMO_EXTENSION_SLUG ); ?>
                                 </small>
                             </div>
                             <h3 class="layers-heading">
-                                <?php _e( 'Thanks for Installing the Child Theme Demo!' , 'layers-child' ); ?>
+                                <?php _e( 'Thanks for Installing the Demo Extension!' , LAYERS_DEMO_EXTENSION_SLUG ); ?>
                             </h3>
                             <div class="layers-excerpt">
                                 <p>
-                                    <?php _e( 'This setup wizard serves as an introduction to your theme and any special options it may have.' , 'layers-child' ); ?>
+                                    <?php _e( 'This setup wizard serves as an introduction to your plugin and any special options it may have.' , LAYERS_DEMO_EXTENSION_SLUG ); ?>
                                 </p>
                                 <ul>
                                     <li><a href="http://docs.layerswp.com/plugin-creation-guide/" target="_blank"><?php _e( 'Open the Guide in a New Tab' , 'layers-child' ); ?></a></li>
@@ -37,11 +37,11 @@
                         </div>
                     </div>
                     <div class="layers-button-well">
-                        <a class="layers-button btn-primary layers-pull-right onbard-next-step" href=""><?php _e( 'Got it, Next Step &rarr;' , 'layers-child' ); ?></a>
+                        <a class="layers-button btn-primary layers-pull-right onbard-next-step" href=""><?php _e( 'Got it, Next Step &rarr;' , LAYERS_DEMO_EXTENSION_SLUG ); ?></a>
                     </div>
                 </div>
                 <div class="layers-column layers-span-8 no-gutter layers-demo-video">
-                    <img src="<?php echo get_stylesheet_directory_uri(). '/assets/images/help.jpg'; ?>" />
+                    <img src="<?php echo LAYERS_DEMO_EXTENSION_URI. '/assets/images/help.jpg'; ?>" />
                 </div>
             </div>
 
@@ -53,32 +53,33 @@
                         <div class="layers-section-title layers-small layers-no-push-bottom">
                             <div class="layers-push-bottom-small">
                                 <small class="layers-label label-secondary">
-                                    <?php _e( 'Demo!' , 'layers-child' ); ?>
+                                    <?php _e( 'Demo!' , LAYERS_DEMO_EXTENSION_SLUG ); ?>
                                 </small>
                             </div>
                             <h3 class="layers-heading">
-                                <?php _e( 'Add Video or Images' , 'layers-child' ); ?>
+                                <?php _e( 'Add Video or Images' , LAYERS_DEMO_EXTENSION_SLUG ); ?>
                             </h3>
                             <div class="layers-excerpt">
                                 <p>
-                                    <?php _e( 'Using this wizard template, you can add an HTML5 video (mp4 format) by using the layers_show_html5_video() function in the right column, or simply add a screenshot or graphic illustrating your step. You may also add extended text or HTML in that column, but it must be compatible with the WordPress admin.' , 'layers-child' ); ?>
+                                    <?php _e( 'Using this wizard template, you can add an HTML5 video (mp4 format) by using the layers_show_html5_video() function in the right column, or simply add a screenshot or graphic illustrating your step. You may also add extended text or HTML in that column, but it must be compatible with the WordPress admin.' , LAYERS_DEMO_EXTENSION_SLUG ); ?>
                                 </p>
                                  <p>
-                                    <?php _e( 'Basic lists may be used to link your users to offsite resources too, such as your online documentation or companion products.' , 'layers-child' ); ?>
+                                    <?php _e( 'Basic lists may be used to link your users to offsite resources too, such as your online documentation or companion products.' , LAYERS_DEMO_EXTENSION_SLUG ); ?>
                                 </p>
                                 <ul>
-                                    <li><a href="http://docs.layerswp.com" target="_blank"><?php _e( 'View Our Documentation' , 'layers-child' ); ?></a></li>
-                                    <li><a href="http://docs.layerswp.com/support/" target="_blank"><?php _e( 'Get Support' , 'layers-child' ); ?></a></li>
+                                    <li><a href="http://docs.layerswp.com" target="_blank"><?php _e( 'View Our Documentation' , LAYERS_DEMO_EXTENSION_SLUG ); ?></a></li>
+                                    <li><a href="http://docs.layerswp.com/support/" target="_blank"><?php _e( 'Get Support' , LAYERS_DEMO_EXTENSION_SLUG ); ?></a></li>
                                 </ul> 
                             </div>
                         </div>
                     </div>
                     <div class="layers-button-well">
-                        <a class="layers-button btn-primary layers-pull-right" href="<?php echo admin_url( 'customize.php' ); ?>"><?php _e( 'Launch Customizer &rarr;' , 'layerswp' ); ?></a>
+                        <a class="layers-button btn-primary layers-pull-right" href="<?php echo admin_url( 'customize.php' ); ?>"><?php _e( 'Launch Customizer &rarr;' , LAYERS_DEMO_EXTENSION_SLUG ); ?></a>
                     </div>
                 </div>
                 <div class="layers-column layers-span-8 no-gutter layers-demo-video">
-                    <?php layers_show_html5_video( 'https://s3.amazonaws.com/cdn.oboxsites.com/layers/videos/storekit-widgets.mp4', 660 ); ?>
+                    <?php  // 'path', width
+					layers_show_html5_video( 'https://s3.amazonaws.com/cdn.oboxsites.com/layers/videos/storekit-widgets.mp4', 660 ); ?>
                 </div>
             </div>
 			
