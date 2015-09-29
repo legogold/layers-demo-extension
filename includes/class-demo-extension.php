@@ -36,9 +36,9 @@ class Layers_Demo_Extension {
 					add_filter( 'layers_template_locations' , array( $this, 'add_template_locations' ) );
 	
 					// Register Customizer Panels, Sections and Controls
-					add_filter( 'layers_customizer_panels' , array( $this, 'demo_customizer_panels' ), 40);
-					add_filter( 'layers_customizer_sections' , array( $this, 'demo_customizer_sections' ), 40);
-					add_filter( 'layers_customizer_controls' , array( $this, 'demo_customizer_controls' ), 40);
+					add_filter( 'layers_customizer_panels' , array( $this, 'demo_customizer_panels' ));
+					add_filter( 'layers_customizer_sections' , array( $this, 'demo_customizer_sections' ));
+					add_filter( 'layers_customizer_controls' , array( $this, 'demo_customizer_controls' ));
 
 			
 					// Add Styles & Scripts
@@ -223,8 +223,10 @@ class Layers_Demo_Extension {
 	
 	public function demo_customizer_panels( $panels ){
 		$panels['layers-extension-demo'] = array(
-				'title' => __( 'Demo Extension', LAYERS_DEMO_EXTENSION_SLUG ),
-				'priority' => 70
+				'title' =>__( 'Demo Options' , LAYERS_DEMO_EXTENSION_SLUG ),
+				'priority' => 100
+					
+
 		);
 		return $panels;
 	}
@@ -255,15 +257,19 @@ class Layers_Demo_Extension {
 	*/
 	
 	public function demo_customizer_controls( $controls ){
-		$controls[ 'section-name' ] = array(
-		  'option-one' => array(
+		$controls[ 'layers-demo-options' ] = array(
+			'demo-controls-heading' => array(
+				'type'  => 'layers-heading',
+				'description' => __( 'These options allow you to change stuff.' , LAYERS_DEMO_EXTENSION_SLUG ),
+			),
+			'option-one' => array(
 			 'type' => 'layers-text',
 			 'label' => __( 'Option One' , LAYERS_DEMO_EXTENSION_SLUG )
-		  ),
-		  'option-two' => array(
+			),
+			'option-two' => array(
 			 'type' => 'layers-text',
 			 'label' => __( 'Option Two' , LAYERS_DEMO_EXTENSION_SLUG )
-		   )      
+			)      
 		);
 		return $controls;
 	}
