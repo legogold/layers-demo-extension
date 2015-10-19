@@ -36,9 +36,9 @@ class Layers_Demo_Extension {
 					add_filter( 'layers_template_locations' , array( $this, 'add_template_locations' ) );
 	
 					// Register Customizer Panels, Sections and Controls
-					add_filter( 'layers_customizer_panels' , array( $this, 'demo_customizer_panels' ));
-					add_filter( 'layers_customizer_sections' , array( $this, 'demo_customizer_sections' ));
-					add_filter( 'layers_customizer_controls' , array( $this, 'demo_customizer_controls' ));
+					add_filter( 'layers_customizer_panels' , array( $this, 'demo_customizer_panels' ), 90 );
+					add_filter( 'layers_customizer_sections' , array( $this, 'demo_customizer_sections' ), 90 );
+					add_filter( 'layers_customizer_controls' , array( $this, 'demo_customizer_controls' ), 90 );
 
 			
 					// Add Styles & Scripts
@@ -176,7 +176,7 @@ class Layers_Demo_Extension {
 		
 			wp_enqueue_style(
 				LAYERS_DEMO_EXTENSION_SLUG . '-audio-admin-style',
-				LAYERS_DEMO_EXTENSION_URI . '/css/layers_demo_admin.css',
+				LAYERS_DEMO_EXTENSION_URI . 'css/layers_demo_admin.css',
 				false,
 				LAYERS_DEMO_EXTENSION_VER,
 				'all'
@@ -184,7 +184,7 @@ class Layers_Demo_Extension {
 			
 			wp_enqueue_script(
 				LAYERS_DEMO_EXTENSION_SLUG . '-admin-meta',
-				LAYERS_DEMO_EXTENSION_URI . '/assets/js/layers-meta.js',
+				LAYERS_DEMO_EXTENSION_URI . 'assets/js/layers-meta.js',
 				array('jquery'),
 				LAYERS_DEMO_EXTENSION_VER
 			); // Admin Styles
