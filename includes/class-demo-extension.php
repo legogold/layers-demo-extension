@@ -176,7 +176,7 @@ class Layers_Demo_Extension {
 		
 			wp_enqueue_style(
 				LAYERS_DEMO_EXTENSION_SLUG . '-audio-admin-style',
-				LAYERS_DEMO_EXTENSION_URI . 'css/layers_demo_admin.css',
+				LAYERS_DEMO_EXTENSION_URI . 'css/layers-demo-admin.css',
 				false,
 				LAYERS_DEMO_EXTENSION_VER,
 				'all'
