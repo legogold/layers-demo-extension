@@ -240,11 +240,9 @@ class Layers_Demo_Extension {
 	public function demo_customizer_sections( $sections ){
 	
 		$sections[ 'layers-demo-options' ] = array(
-				'options' => array(
 						'title' =>__( 'Demo Options' , LAYERS_DEMO_EXTENSION_SLUG ),
 						'panel' => 'layers-extension-demo'
-				)
-		);
+				);
 	
 		return $sections;
 	}
